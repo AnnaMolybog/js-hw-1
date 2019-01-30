@@ -8,9 +8,7 @@ let expenses = parseFloat(prompt("How much is it costs?", 0)) || 0;
 let appData = {
     budget: typeof money === 'number' ? money : 0,
     timeDate: time,
-    expenses: {
-        expensesTopic: typeof expenses === 'number' ? expenses : 0
-    },
+    expenses: {},
     optionalExpences: {},
     income: [],
     savings: true,
@@ -27,5 +25,8 @@ let appData = {
         return netBudget;
     }
 };
+
+appData.expenses.expensesTopic = typeof expenses === 'number' ? expenses : 0;
+
 const budgetPerDay = appData.calculateNetBudget()/30;
 alert('Budget per day is ' + budgetPerDay);
