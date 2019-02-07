@@ -112,7 +112,6 @@ appData.checkSavings();
 appData.detectDayBudget();
 
 console.log('Program uses following data: ');
-for (let value in appData) {
-    let output = value + ": " + appData[value];
+for (let value of appData) {
     console.log(value);
 }
